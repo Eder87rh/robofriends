@@ -30,7 +30,7 @@ describe('requestRobots reducer', () => {
   const initialStateRobots = {
     isPending: false,
     robots: [],
-    //error: ""
+    error: ""
   }
 
   it('Should return the initial state', () => {
@@ -42,7 +42,8 @@ describe('requestRobots reducer', () => {
       type: REQUEST_ROBOTS_PENDING
     })).toEqual({ 
       robots: [],
-      isPending: true
+      isPending: true,
+      error: ""
     })
   });
 
@@ -60,7 +61,8 @@ describe('requestRobots reducer', () => {
         name: 'test',
         email: 'test@gmail.com'
       }],
-      isPending: false
+      isPending: false,
+      error: ""
     })
   });
 
